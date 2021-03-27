@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BlurLayout">
+        <attr name="blur_downscaleFactor" format="float" />
+        <attr name="blur_blurRadius" format="integer" />
+        <attr name="blur_fps" format="integer" />
+        <attr name="blur_cornerRadius" format="dimension" />
+        <attr name="blur_alpha" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="TriangleShape">
+        <attr name="triangleType">
+            <enum name="centerTop" value="0" />
+            <enum name="leftBottom" value="1" />
+            <enum name="rightBottom" value="2" />
+            <enum name="centerBottom" value="3" />
+            <enum name="leftTop" value="4" />
+        </attr>
+        <attr name="triangleColor" format="color" />
+        <attr name="TriangleCorner" format="float" />
+    </declare-styleable>
+</resources>
