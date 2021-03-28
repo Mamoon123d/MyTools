@@ -1,0 +1,17 @@
+IMPLEMENTATION
+This library has different methods which you can use to maintain your image blur.
+
+BlurImage.with(getApplicationContext()).load(R.drawable.myImage).intensity(20).Async(true).into(imageView);
+                                       OR
+BlurImage.with(getApplicationContext()).load(bitmap_Image).intensity(20).Async(true).into(imageView);
+method (load) :- load(int resource), load(Bitmap bitmap)
+
+method(intesity):- intensity( int value) { Increase Blur and limit of value is in between 0 to 25 }
+
+Synchronous way to Load :- To make blur in synchronous you need to put false in Async method.
+
+ASynchronous way to Load:- To make blur in asynchronous (Background) you need to put true in Async method.
+
+Direct get Blur Bitmap :- To get direct blur bitmap call the following code .
+
+Bitmap bitmap = BlurImage.with(getApplicationContext()).load(R.drawable.mountain).intensity(20).Async(true).getImag

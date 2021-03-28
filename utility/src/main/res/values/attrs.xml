@@ -19,4 +19,17 @@
         <attr name="triangleColor" format="color" />
         <attr name="TriangleCorner" format="float" />
     </declare-styleable>
+
+
+    <declare-styleable name="RealtimeBlurView">
+        <attr name="realtimeBlurRadius" format="dimension" />
+        <attr name="realtimeDownsampleFactor" format="float" />
+        <attr name="realtimeOverlayColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="BlurShadowImageView">
+        <attr name="v_imageRound" format="dimension" />
+        <attr name="v_imageSrc" format="reference" />
+        <attr name="v_shadowOffset" format="dimension" />
+    </declare-styleable>
 </resources>
