@@ -46,7 +46,7 @@
         android:layout_height="200dp"
         android:layout_gravity="center"
         app:layout_constraintTop_toBottomOf="@+id/img"
-        app:v_imageRound="20dp"
+        app:v_imageRound="2dp"
         android:layout_marginTop="12dp"
         app:v_imageSrc="@drawable/gm_6"
         app:v_shadowOffset="40dp"

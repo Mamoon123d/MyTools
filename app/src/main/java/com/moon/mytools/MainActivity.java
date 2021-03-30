@@ -1,5 +1,7 @@
 package com.moon.mytools;
 
+import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.widget.SeekBar;
@@ -8,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.moon.utility.blurShadow.BlurShadowImageView;
 import com.moon.utility.realTimeBlur.RealtimeBlurView;
+import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Target;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -54,6 +58,25 @@ public class MainActivity extends AppCompatActivity {
 
 //Sets Image Bitmap
       //  blurshadowimageview.setImageBitmap(bitmap);
+
+         Picasso.get().load("https://i.imgur.com/DvpvklR.png").into(new Target() {
+             @Override
+             public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
+                 blurshadowimageview.setImageBitmap(bitmap);
+
+             }
+
+             @Override
+             public void onBitmapFailed(Exception e, Drawable errorDrawable) {
+
+             }
+
+             @Override
+             public void onPrepareLoad(Drawable placeHolderDrawable) {
+
+             }
+         });
+
     }
 
     private void updateRadius() {

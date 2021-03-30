@@ -1,12 +1,15 @@
 package com.moon.utility;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 public class Colors {
 
@@ -93,6 +96,29 @@ public class Colors {
 
 
         return originalColor;
+    }
+
+    public static String randomColor(Context context, List<String> colors) {
+        /*List<String> colors=new ArrayList<>();
+        colors.add("#5E97F6");
+        colors.add("#9CCC65");
+        colors.add("#FF8A65");
+        colors.add("#9E9E9E");
+        colors.add("#9FA8DA");
+        colors.add("#90A4AE");
+        colors.add("#AED581");
+        colors.add("#F6BF26");
+        colors.add("#FFA726");
+        colors.add("#4DD0E1");
+        colors.add("#BA68C8");
+        colors.add("#A1887F");*/
+        Random r = new Random();
+        int i1 = r.nextInt(11 - 0) + 0;
+        //genrating shape with colors
+        GradientDrawable draw = new GradientDrawable();
+        draw.setShape(GradientDrawable.OVAL);
+        draw.setColor(Color.parseColor(colors.get(i1)));
+        return colors.get(i1);
     }
 
 }
